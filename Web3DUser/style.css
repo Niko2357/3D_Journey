@@ -1,0 +1,15 @@
+html{
+    background-color: azure;
+}
+body{
+    background-color: azure;
+    font-family: 'Brush Script MT', cursive; 
+    color:#333;
+}
+h1, h2, h3{
+    font-weight: 600;
+}
+.navbar{
+    width:100%;
+    min-height: 100vh;
+}
