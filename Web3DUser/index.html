@@ -4,27 +4,38 @@
         <title>3D Journey</title>
         <link rel="stylesheet" href="style.css">
         <meta name="description" content="Web Application for users of 3D printers.">
-        <meta content="logo16Pr.png" itemprop="image">
+        <link rel="icon" href="logo16Pr.png" alt="Logo">
     </head>
     <body>
-        <div class="navbar">
+        <div class="bar">
             <nav>
-                <img src="logo48Pr.png" class="logo">
+                <a href="index.html"><img src="logoPr.png" class="logo" alt="Logo"></a>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="printer.html">Your Printer</a></li>
-                    <li><a href="idea.html">Ideas</a></li>
-                    <li><a href="journey.html">Your Journey</a></li>
-                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="index.html" data-item="Home">Home</a></li>
+                    <li><a href="printer.html" data-item="Your Printer">Your Printer</a></li>
+                    <li><a href="idea.html" data-item="Ideas">Ideas</a></li>
+                    <li><a href="journey.html" data-item="Your Journey">Your Journey</a></li>
                 </ul>
-                <dev>
-                    <a href="account.html">My Account</a>
-                    <a href="#">Download App</a>
-                </dev>
+                <div>
+                    <a href="account.html" data-item="My Account">My Account</a>
+                      
+                </div>
+                <div class="right-nav">
+                    <a href="settings.html"><img src="settings.png" alt="Settings"></a> 
+                    <div class="selected-lang">
+                    <select id="lang">
+                        <option value="cz">Čeština</option>
+                        <option value="en">English</option>
+                        <option value="it">Italiano</option>
+                        <option value="fr">Français</option>
+                        <option value="chi">中文</option>
+                    </select>
+                </div>
+                </div>
             </nav>
         </div>
     </body>
     <footer>
-        
+        <div class="footer-text"></div>    
     </footer>
 </html>
