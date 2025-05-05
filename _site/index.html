@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <title>3D Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Application for users of 3D printers.">
+    <link rel="icon" href="image/logo2.png" alt="Logo">
+</head>
+<body>
+    <header class="nav">
+        <nav>
+            <div class="text-logo">
+                <a href="index.html"><img src="image/logo2.png" class="logo" alt="Logo"></a>
+                <a href="index.html" class="logo-text">3D Journey</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="printer.html">Your Printer</a></li>
+                <li><a href="idea.html">Ideas</a></li>
+                <li><a href="journey.html">Your Journey</a></li>
+            </ul>
+            <button class="account-btn">My Account</button>
+        </nav>
+    </header>
+    <div class="features-background">
+        <div class="features">
+            
+            <div class="feature">
+                <a href="tutorials.html"><img src="image/tutor.webp" alt="tutorials" class="feature-image"></a>
+                <h2>Tutorials</h2>
+                <p>Step-by-step guides to help you master 3D printing.</p>
+            </div>
+            <div class="feature">
+                <a href="printer.html"><img src="image/printer.jpeg" alt="tutorials" class="feature-image"></a>
+                <h2>Your Printer</h2>
+                <p>Control your printer directly from our website.</p>
+            </div>
+            <div class="feature">
+                <a href="idea.html"><img src="image/print.jpg" alt="tutorials" class="feature-image"></a>
+                <h2>Ideas</h2>
+                <p>Explore creative 3D printing ideas and projects.</p>
+            </div>
+            <div class="feature">
+                <a href="journey.html"><img src="image/model.webp" alt="tutorials" class="feature-image"></a>
+                <h2>Journey</h2>
+                <p>Save your favourite ideas and tips.</p>
+            </div>
+            </div>
+        </div>
+        
+        <section class="motto">
+            <h1>Create. Innovate. Print.</h1>
+            <p>Your journey from idea to reality starts here.</p>
+        </section>
+
+        <div id="loginModal" style="display: none;" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                
+                <div id="formTabs">
+                    <button id="showLogin">Login</button>
+                    <button id="showSignup">Sign Up</button>
+                </div>
+        
+                <div id="loginSection">
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <input type="text" id="login-username" placeholder="Username" required>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                    <p id="login-message"></p>
+                </div>
+        
+                <div id="signupSection" style="display: none;">
+                    <h2>Sign Up</h2>
+                    <form id="signupForm">
+                        <input type="text" id="signup-username" placeholder="Username" required>
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <p id="signup-message"></p>
+                </div>
+            </div>
+        </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 3D Journey. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/nikola-poláchová-905a342a2"><img src="image/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://discord.gg/6YQkYtTyzF"><img src="image/discord.png" alt="Discord" class="social-icon"></a>
+                <a href="https://www.instagram.com"><img src="image/instagram.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://github.com/Niko2357/3D_Journey"><img src="image/github.png" alt="Github" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="accountLogic.js"></script>
+</body>
+</html>

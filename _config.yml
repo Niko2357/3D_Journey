@@ -1,0 +1,9 @@
+title: 3D Journey
+description: Web Application for users of 3D printers.
+url: "http://localhost:4000"
+baseurl: ""
+author:
+  name: Your Name
+  email: your.email@example.com
+
+markdown: kramdown
