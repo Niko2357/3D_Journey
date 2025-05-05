@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3D Journey</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Web Application for users of 3D printers.">
+        <link rel="icon" href="image/logo2.png" alt="Logo">
+    </head>
+    <body>
+        <header class="nav">
+            <nav>
+                <div class="text-logo">
+                    <a href="index.html"><img src="image/logo2.png" class="logo" alt="Logo"></a>
+                    <a href="index.html" class="logo-text">3D Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="printer.html">Your Printer</a></li>
+                    <li><a href="idea.html">Ideas</a></li>
+                    <li><a href="journey.html">Your Journey</a></li>
+                </ul>
+                <button class="account-btn">My Account</button>
+            </nav>
+    </header>
+    <h1>How to Connect Your 3D Printer to This Website Using a Raspberry Pi</h1>
+    <p>Learn how to set up a Raspberry Pi to control and monitor your 3D printer remotely via your website.</p>
+    <section>
+        <h2>What You Need</h2>
+        <ul>
+            <li>A Raspberry Pi (Raspberry Pi 3 or later recommended)</li>
+            <li>A 3D Printer</li>
+            <li>OctoPrint installed on the Raspberry Pi</li>
+            <li>Wi-Fi connection</li>
+            <li>Basic knowledge of terminal commands</li>
+            <li>Your website where the 3D printer will be integrated</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Step 1: Set Up Your Raspberry Pi</h2>
+        <p>The first step is setting up the Raspberry Pi. Start by downloading the official <a href="https://www.raspberrypi.org/software/" target="_blank">Raspberry Pi OS</a> and flashing it to a microSD card.</p>
+        <p>Once the Raspberry Pi OS is installed, connect the Raspberry Pi to your 3D printer via USB.</p>
+    </section>
+
+    <section>
+        <h2>Step 2: Install OctoPrint</h2>
+        <p>OctoPrint is an open-source 3D printer management tool that allows you to control and monitor your 3D printer remotely. Follow these steps to install OctoPrint:</p>
+        <ol>
+            <li>Open the terminal on your Raspberry Pi.</li>
+            <li>Update your Raspberry Pi's software by running: <code>sudo apt-get update</code></li>
+            <li>Install the necessary dependencies: <code>sudo apt-get install python3-pip python3-dev python3-setuptools</code></li>
+            <li>Install OctoPrint using pip: <code>sudo pip3 install octoprint</code></li>
+            <li>Run the OctoPrint server: <code>octoprint serve</code></li>
+        </ol>
+        <p>Once OctoPrint is running, you should be able to access it from any device on the same network by typing <code>http://<raspberry_pi_ip>:5000</code> in your browser.</p>
+    </section>
+
+    <section>
+        <h2>Step 3: Integrate OctoPrint with Your Website</h2>
+        <p>Now that OctoPrint is set up on your Raspberry Pi, it’s time to integrate it with your website. To do this, you'll need to embed the OctoPrint control interface into your website. You can use an <code>iframe</code> for this purpose.</p>
+        <pre><code>&lt;iframe src="http://<raspberry_pi_ip>:5000" width="100%" height="600px"&gt;&lt;/iframe&gt;</code></pre>
+        <p>Simply replace <code>&lt;raspberry_pi_ip&gt;</code> with the actual IP address of your Raspberry Pi. This will allow users to control and monitor the 3D printer directly from your website.</p>
+    </section>
+
+    <section>
+        <h2>Step 4: Enhance Security and Access Control</h2>
+        <p>For security reasons, it’s essential to restrict access to the OctoPrint interface. Consider adding a login page or enabling HTTPS for a secure connection. Here are a few things you can do:</p>
+        <ul>
+            <li>Enable user authentication on OctoPrint for additional security.</li>
+            <li>Use a VPN or configure port forwarding to securely access the Raspberry Pi from outside your local network.</li>
+            <li>Consider using a secure connection (HTTPS) by setting up SSL certificates on your Raspberry Pi.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Step 5: Testing and Troubleshooting</h2>
+        <p>After setting up the connection, test the integration by printing a small object. Ensure that the control interface is functioning properly on your website. If you encounter any issues, check the following:</p>
+        <ul>
+            <li>Ensure that OctoPrint is running on your Raspberry Pi.</li>
+            <li>Check the network connection between the Raspberry Pi and your website server.</li>
+            <li>Verify that the firewall is not blocking communication between your website and the Raspberry Pi.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+        <p>By following these steps, you can successfully connect your 3D printer to your website using a Raspberry Pi. This will enable you to remotely control and monitor your 3D printer, giving you a convenient way to manage your prints from anywhere.</p>
+    </section>
+
+    <footer>
+        <p>Written by [Your Name] | &copy; 2025 [Your Website Name]</p>
+            <div class="footer-content">
+                <p>&copy; 2025 3D Journey. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/nikola-poláchová-905a342a2"><img src="image/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                    <a href="https://discord.gg/6YQkYtTyzF"><img src="image/discord.png" alt="Discord" class="social-icon"></a>
+                    <a href="https://www.instagram.com"><img src="image/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="https://github.com/Niko2357/3D_Journey"><img src="image/github.png" alt="Github" class="social-icon"></a>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3D Journey</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Web Application for users of 3D printers.">
+        <link rel="icon" href="image/logo2.png" alt="Logo">
+    </head>
+    <body>
+        <header class="nav">
+            <nav>
+                <div class="text-logo">
+                    <a href="index.html"><img src="image/logo2.png" class="logo" alt="Logo"></a>
+                    <a href="index.html" class="logo-text">3D Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="printer.html">Your Printer</a></li>
+                    <li><a href="idea.html">Ideas</a></li>
+                    <li><a href="journey.html">Your Journey</a></li>
+                </ul>
+                <button class="account-btn">My Account</button>
+            </nav>
+    </header>
+        <h1>How to Connect Your 3D Printer Using Various Methods</h1>
+        <p>Learn how to connect and control your 3D printer using Android, Windows, and Internet-based connections.</p>
+
+    <section>
+        <h2>How to Connect Your 3D Printer Using Android</h2>
+        <p>Connecting your 3D printer with your Android device is a convenient way to control your prints remotely. Here's how you can do it:</p>
+
+        <h3>Step 1: Install the OctoPrint Mobile App</h3>
+        <p>OctoPrint is a popular tool that helps you control and monitor your 3D printer remotely. Follow these steps:</p>
+        <ol>
+            <li>Go to the Google Play Store on your Android device and search for the OctoPrint mobile app.</li>
+            <li>Install the app and open it once installed.</li>
+        </ol>
+
+        <h3>Step 2: Connect the App to Your Raspberry Pi</h3>
+        <p>Ensure that your Raspberry Pi (running OctoPrint) is connected to the same Wi-Fi network as your Android device.</p>
+        <ol>
+            <li>Open the OctoPrint app and enter the IP address of your Raspberry Pi in the app.</li>
+            <li>Log in with your OctoPrint credentials if prompted.</li>
+        </ol>
+
+        <h3>Step 3: Start Controlling Your 3D Printer</h3>
+        <p>You can now monitor your prints, control your printer, upload new print files, and more, all from your Android device.</p>
+    </section>
+
+    <section>
+        <h2>How to Connect Your 3D Printer Using Windows</h2>
+        <p>If you're using a Windows PC to connect to your 3D printer, follow these steps to set up and control your printer:</p>
+
+        <h3>Step 1: Install Pronterface or Repetier-Host</h3>
+        <p>Pronterface and Repetier-Host are popular software tools that allow you to control your 3D printer from your Windows PC. Here's how you can install them:</p>
+        <ol>
+            <li>Go to the official websites of Pronterface (<a href="https://www.pronterface.com" target="_blank">pronterface.com</a>) or Repetier-Host (<a href="https://www.repetier.com" target="_blank">repetier.com</a>).</li>
+            <li>Download and install the software on your Windows PC.</li>
+            <li>Launch the program after installation.</li>
+        </ol>
+
+        <h3>Step 2: Connect the Printer to the PC</h3>
+        <p>Connect your 3D printer to the PC using a USB cable. Ensure that the printer is powered on.</p>
+        <ol>
+            <li>Open the software (Pronterface or Repetier-Host) and select the correct COM port and baud rate for your 3D printer.</li>
+            <li>Click on "Connect" to establish communication between your PC and the printer.</li>
+        </ol>
+
+        <h3>Step 3: Start Printing and Controlling the Printer</h3>
+        <p>Once connected, you can start sending G-code commands to your printer, control print speeds, monitor progress, and more from your Windows PC.</p>
+    </section>
+
+    <section>
+        <h2>How to Connect Your 3D Printer Using an Internet Connection</h2>
+        <p>Connecting your 3D printer over the Internet allows you to control it from anywhere. Here's how you can do it:</p>
+
+        <h3>Step 1: Set Up a Raspberry Pi with OctoPrint</h3>
+        <p>To control your 3D printer over the Internet, you need a Raspberry Pi running OctoPrint. If you haven’t already set it up, follow these steps:</p>
+        <ol>
+            <li>Download and install OctoPrint on your Raspberry Pi (refer to the OctoPrint setup guide).</li>
+            <li>Connect your Raspberry Pi to the 3D printer via USB.</li>
+            <li>Ensure that your Raspberry Pi is connected to the Internet via Wi-Fi or Ethernet.</li>
+        </ol>
+
+        <h3>Step 2: Enable Remote Access</h3>
+        <p>To connect to your Raspberry Pi over the Internet, you need to set up remote access:</p>
+        <ul>
+            <li><strong>Option 1:</strong> Set up a VPN (Virtual Private Network) to securely access your local network from anywhere.</li>
+            <li><strong>Option 2:</strong> Use a service like <a href="https://ngrok.com/" target="_blank">ngrok</a> to create a secure tunnel to your Raspberry Pi's OctoPrint interface.</li>
+            <li><strong>Option 3:</strong> Set up port forwarding on your router (make sure to use strong security practices).</li>
+        </ul>
+
+        <h3>Step 3: Access Your Printer Remotely</h3>
+        <p>Once the remote access is set up, you can access your Raspberry Pi and control the 3D printer from anywhere via a web browser or mobile app.</p>
+        <ul>
+            <li>For VPN, connect to the VPN and access OctoPrint via the local IP address of your Raspberry Pi.</li>
+            <li>If using ngrok or port forwarding, use the public address provided to access OctoPrint remotely.</li>
+        </ul>
+
+        <h3>Step 4: Monitor and Control Your 3D Printer</h3>
+        <p>You can now remotely monitor your 3D printer, upload new prints, and adjust settings from your computer or mobile device.</p>
+    </section>
+
+    <footer>
+        <p>Written by [Your Name] | &copy; 2025 [Your Website Name]</p>
+        <div class="footer-content">
+            <p>&copy; 2025 3D Journey. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/nikola-poláchová-905a342a2"><img src="image/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://discord.gg/6YQkYtTyzF"><img src="image/discord.png" alt="Discord" class="social-icon"></a>
+                <a href="https://www.instagram.com"><img src="image/instagram.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://github.com/Niko2357/3D_Journey"><img src="image/github.png" alt="Github" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
