@@ -34,34 +34,42 @@
             </div>
         </div>
     </section>
+    
     <section class="tutorials-content">
         <h2>Tutorials</h2>
         <p class="tutorial-intro"></p>
-    
-        <div class="tutorial-grid">
+        <div class="tutorial-controls">
+            <input type="text" id="searchInput" placeholder="Search tutorial by title..." />
+            <select id="sortSelect">
+                <option value="default">Sort by</option>
+                <option value="title">Title (A–Z)</option>
+                <option value="date">Date (Newest First)</option>
+            </select>
+        </div>
+        <div class="tutorial-grid" data-date="2025-05-01">
             <div class="tutorial-card">
-                <a href="3d-printer-raspberry-pi.html">
+                <a href="3d-printer-rasberry-pi.html">
                     <img src="image/tutor.webp" alt="tutorial preview">
                     <h3 class="tutorial-title">How to Connect Your 3D Printer to This Website Using a Raspberry Pi</h3>
                     <p>Learn how to set up your 3D printer with a Raspberry Pi and integrate it with this website.</p>
                 </a>
                 <button class="favorite-btn">🤍</button>
             </div>
-            <div class="tutorial-card">
+            <div class="tutorial-card" data-date="2025-05-01">
                 <a href="3d-printer-android.html">
                 <img src="image/tutor.webp" alt="tutorial preview">
                 <h3>How to connect Your 3D printer using Android</h3>
                 <p>Learn how to set up your 3D printer with a Android.</p>
             </a>
                 <button class="favorite-btn">🤍</button>
-            </div><div class="tutorial-card">
+            </div><div class="tutorial-card" data-date="2025-05-01">
                 <a href="3d-printer-windows.html">
                 <img src="image/tutor.webp" alt="tutorial preview">
                 <h3>How to connect Your 3D printer using Windows</h3>
                 <p>Set up your 3D printer with a Windows and integrate it with this website.</p>
             </a>
                 <button class="favorite-btn">🤍</button>
-            </div><div class="tutorial-card">
+            </div><div class="tutorial-card" data-date="2025-05-01">
                 <a href="3d-printer-internet.html">
                 <img src="image/tutor.webp" alt="tutorial preview">
                 <h3>How to connect Your 3D printer using Internet Connection</h3>
@@ -137,6 +145,42 @@
         });
     </script>
     <script src="accountLogic.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const tutorials = Array.from(document.querySelectorAll('.tutorial-card'));
+    
+        function filterAndSortTutorials() {
+            const searchValue = searchInput.value.toLowerCase();
+            const sortValue = sortSelect.value;
+    
+            let filtered = tutorials.filter(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                return title.includes(searchValue);
+            });
+    
+            if (sortValue === 'title') {
+                filtered.sort((a, b) => {
+                    const titleA = a.querySelector('h3').textContent.toLowerCase();
+                    const titleB = b.querySelector('h3').textContent.toLowerCase();
+                    return titleA.localeCompare(titleB);
+                });
+            } else if (sortValue === 'date') {
+                filtered.sort((a, b) => {
+                    const dateA = new Date(a.dataset.date);
+                    const dateB = new Date(b.dataset.date);
+                    return dateB - dateA;
+                });
+            }
+    
+            const grid = document.querySelector('.tutorial-grid');
+            grid.innerHTML = ''; // Clear current cards
+            filtered.forEach(card => grid.appendChild(card));
+        }
+    
+        searchInput.addEventListener('input', filterAndSortTutorials);
+        sortSelect.addEventListener('change', filterAndSortTutorials);
+    </script>
 </div>
 </body>
 </html>

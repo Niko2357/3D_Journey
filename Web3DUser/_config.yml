@@ -3,7 +3,7 @@ description: Web Application for users of 3D printers.
 url: "http://localhost:4000"
 baseurl: ""
 author:
-  name: Your Name
-  email: your.email@example.com
+  name: Nikola Polachova
+  email: niki.polach@gmail.com
 
 markdown: kramdown

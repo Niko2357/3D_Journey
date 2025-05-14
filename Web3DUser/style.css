@@ -470,6 +470,28 @@ nav ul li a:hover::before {
     position: relative;
     z-index: 1;
 }
+.tutorial-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.tutorial-controls input,
+.tutorial-controls select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+/* Articles */
+.article-container{
+    justify-content: center;
+    margin: 0 5rem;
+}
+
 /* Printer Profile Section */
 .printer-content{
     margin: 0 4rem;
